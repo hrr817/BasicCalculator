@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> Calculator </title>
+     <link rel="stylesheet" href="index.css">
+     <script src="./index.js" defer></script>
+</head>
+<body>
+     <section class="container-flex">
+          <div class="calculator">
+               <div id="screen_2" class="output"> </div>
+               <div id="screen_1" class="output">0</div>
+
+               <div class="buttons-container">
+                    <div class="number-grid">
+                         <span class="_num">7</span>
+                         <span class="_num">8</span>
+                         <span class="_num">9</span>
+
+                         <span class="_num">4</span>
+                         <span class="_num">5</span>
+                         <span class="_num">6</span>
+
+                         <span class="_num">1</span>
+                         <span class="_num">2</span>
+                         <span class="_num">3</span>
+
+                         <span id="decimal" style="grid-column: 2 / span 1">.</span>
+                         <span class="_num">0</span>
+                    </div>
+
+                    <div class="operation-grid center">
+                         <span id="backspace"> ⟵ </span>
+                         <span id="all-clear"> AC </span>
+                         <span id="divide"> ÷ </span>
+                         <span id="multiply"> × </span>
+                         <span id="minus"> - </span>
+                         <span id="plus"> + </span>
+                         <span id="equal"> = </span>
+                    </div>
+               </div>
+          </div>
+          <div id="theme-toggler"> Light Mode </div>
+     </section>
+</body>
+</html>

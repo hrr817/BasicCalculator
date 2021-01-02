@@ -1,0 +1,161 @@
+* { 
+     font-size: 20px;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     box-sizing: border-box;
+}
+
+body, html {
+     display: flex;
+     flex-direction: column;
+     width: 100vw;
+     height: 100vh;
+     justify-content: center;
+     align-items: center;
+     margin: 0;
+     padding: 0;
+     transition: all 0.3s ease-in-out;
+     
+     /* CSS Variables */
+     --TextColor: #181717;
+     --BackgroundColor: #fffffa;
+     --BorderColor: #2e2c2c;
+
+     /* End */
+
+     color: var(--TextColor);
+     background-color: var(--BackgroundColor);
+}
+
+body[data-theme='dark'] {
+     --TextColor: #f7f7eb;
+     --BackgroundColor: #252222;
+     --BorderColor: #aaaaa5;
+}
+
+.center {
+     justify-content: center;
+     align-items: center;
+}
+
+
+.container-flex {
+     display: flex;
+     flex-direction: column;
+     max-width: 600px;
+     width: 80%;
+     margin: auto;
+     padding: 0.2em;
+} 
+
+.calculator {
+     border: 2px solid var(--BorderColor);
+}
+
+#theme-toggler {
+     cursor: pointer;
+     display: flex;
+     font-family: 'Courier New', Courier, monospace;
+     font-size: 0.5em;
+     padding: 1em;
+     justify-content: flex-end;
+}
+
+.output {
+     display: flex;
+     height: 60px;
+     align-items: center;
+     justify-content: flex-end;
+     overflow-y: hidden;
+     overflow-x: auto;
+     width: 90%;
+     margin: 0 auto;
+     white-space: nowrap;
+}
+
+#screen_1 {
+     font-size: 1.4em;
+}
+
+#screen_2 {
+     overflow-x: auto;
+     font-size: 1em;
+     height: 40px;
+}
+
+.buttons-container {
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+}
+
+.number-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr 1fr;
+     width: 60%;
+}
+
+.operation-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr 1fr;
+     width: 40%;
+     justify-content: center;
+     align-items: center;
+     grid-template-areas: 
+     "DI BS"
+     "ML AC"
+     "MI ."
+     "PL EQ";
+}
+
+.operation-grid > *,
+.number-grid > * {
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     height: 70px;
+     align-items: center;
+     text-align: center;
+     transition: transform 0.2s cubic-bezier(.49, .94, .28, .36);
+}
+
+.operation-grid > *:hover,
+.number-grid>*:hover {
+     border: 2px dashed var(--BorderColor);
+}
+
+.operation-grid>*:active,
+.number-grid>*:active {
+     transform: scale(0.9) translateY(5%);
+}
+
+
+#backspace {
+     grid-area: BS;
+}
+
+#all-clear {
+     grid-area: AC;
+}
+
+#divide {
+     grid-area: DI;
+}
+
+#multiply {
+     grid-area: ML;
+}
+
+#minus {
+     grid-area: MI;
+}
+
+#plus {
+     grid-area: PL;
+}
+
+#equal {
+     grid-area: EQ;
+}
+
